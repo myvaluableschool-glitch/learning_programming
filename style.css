@@ -1,0 +1,41 @@
+body {
+  margin:0;
+  font-family: 'Segoe UI';
+  background:#0f172a;
+  color:white;
+}
+
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#020617;
+}
+
+nav a {
+  margin-left:20px;
+  color:#94a3b8;
+}
+
+.hero {
+  text-align:center;
+  padding:100px 20px;
+}
+
+.btn {
+  background:linear-gradient(45deg,#6366f1,#8b5cf6);
+  padding:12px 25px;
+  border-radius:8px;
+}
+
+.features {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+}

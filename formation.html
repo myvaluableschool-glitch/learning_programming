@@ -2,7 +2,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch('data/formations.json')
+fetch('formations.json')
 .then(res => res.json())
 .then(data => {
   const f = data.find(x => x.id == id);

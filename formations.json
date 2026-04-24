@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Débutant",
+    "level": "debutant",
+    "video": "assets/video1.mp4",
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "pdf": "assets/js.pdf"
+  },
+  {
+    "id": 2,
+    "title": "React Intermédiaire",
+    "level": "intermediaire",
+    "video": "assets/video2.mp4",
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "pdf": "assets/react.pdf"
+  }
+]
