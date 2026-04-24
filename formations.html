@@ -1,0 +1,19 @@
+<script>
+fetch('data/formations.json')
+.then(res => res.json())
+.then(data => {
+  const container = document.getElementById("list");
+
+  data.forEach(f => {
+    container.innerHTML += `
+      <div class="card">
+        <h3>${f.title}</h3>
+        <p>${f.level}</p>
+        <a href="formation.html?id=${f.id}">Voir</a>
+      </div>
+    `;
+  });
+});
+</script>
+
+<div id="list"></div>

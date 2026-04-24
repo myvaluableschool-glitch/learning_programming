@@ -1,0 +1,8 @@
+<script>
+let progress = JSON.parse(localStorage.getItem("progress")) || [];
+
+document.write("<h2>Progression :</h2>");
+progress.forEach(id => {
+  document.write("Formation complétée ID: " + id + "<br>");
+});
+</script>

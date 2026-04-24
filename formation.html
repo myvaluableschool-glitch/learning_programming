@@ -1,0 +1,27 @@
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+fetch('data/formations.json')
+.then(res => res.json())
+.then(data => {
+  const f = data.find(x => x.id == id);
+
+  document.body.innerHTML += `
+    <h1>${f.title}</h1>
+
+    <video controls width="400">
+      <source src="${f.video}">
+    </video>
+
+    <iframe width="400" height="250"
+      src="${f.youtube}">
+    </iframe>
+
+    <br>
+    <a href="${f.pdf}" download>Télécharger PDF</a>
+
+    <button onclick="markDone(${f.id})">Terminé</button>
+  `;
+});
+</script>
