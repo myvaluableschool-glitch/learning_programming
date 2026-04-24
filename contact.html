@@ -1,14 +1,27 @@
-<form onsubmit="book(event)">
-  <input placeholder="Nom" required>
-  
-  <select id="type">
-    <option>Révision</option>
-    <option>TP</option>
-    <option>Coaching</option>
-    <option>Formation intensive</option>
-  </select>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-  <input type="date" id="date" required>
+<body>
 
-  <button>Réserver</button>
-</form>
+<div class="container">
+  <h2>Réserver une session</h2>
+
+  <form>
+    <input placeholder="Nom">
+    <select>
+      <option>Révision</option>
+      <option>TP</option>
+      <option>Coaching</option>
+      <option>Formation intensive</option>
+    </select>
+    <button class="btn">Envoyer</button>
+  </form>
+</div>
+
+</body>
+</html>
