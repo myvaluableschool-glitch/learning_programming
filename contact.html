@@ -2,25 +2,61 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Contact</title>
+
+<title>Contact | Formation C en ligne - DevAcademy</title>
+<meta name="description" content="Contactez DevAcademy pour votre formation en programmation C. Email, Instagram et Facebook disponibles.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
-  <h2>Réserver </h2>
+<header>
+  <h1>DevAcademy</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#formations">Formations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <form>
-    <input placeholder="Nom">
-    <select>
-      <option> Cours particuliers réguliers pratiques (en groupe en ligne)</option>
-      <option> Une séance de révision</option>
+<section class="container">
+  <h2>Nous contacter</h2>
+  <p>
+    Une question sur la formation en langage C ? Contactez-nous directement.
+  </p>
+
+  <form action="mailto:test@example.com" method="post" enctype="text/plain">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    
+    <input type="email" name="email" placeholder="Votre email" required>
+
+    <select name="sujet">
+      <option>Formation C - Niveau Débutant -- Cours particuliers réguliers pratiques (en groupe en ligne)</option>
+      <option>Formation C - Niveau Intermédiaire -- Cours particuliers réguliers pratiques (en groupe en ligne)</option>
+      <option>Formation C - Niveau Expert -- Cours particuliers réguliers pratiques (en groupe en ligne)</option>
+      <option>Réserver une séance de révision</option> 
       <option>Formation intensive</option>
+      <option>Question générale</option>
     </select>
+
+    <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
+
     <button class="btn">Envoyer</button>
   </form>
-</div>
+</section>
+
+<section class="container">
+  <h2>Autres moyens de contact</h2>
+  <p>Email : <a href="mailto:test@example.com">test@example.com</a></p>
+  <p>Instagram : <a href="#">@devacademy</a></p>
+  <p>Facebook : <a href="#">DevAcademy</a></p>
+</section>
+
+<footer class="container">
+  <p>© 2026 DevAcademy - Formation en programmation C</p>
+</footer>
 
 </body>
 </html>
