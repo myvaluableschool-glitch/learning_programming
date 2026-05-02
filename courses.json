@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "C Débutant - Bases de la programmation",
-    "image": "assets/img1.jpg",
+    "image": "assets/chris-ried-ieic5Tq8YMk-unsplash.jpg",
     "level": "Débutant",
     "introVideo": "https://www.youtube.com/embed/KJgsSFOSQv0",
     "chapters": [
@@ -26,7 +26,7 @@
   {
     "id": 2,
     "title": "C Intermédiaire - Pointeurs et fonctions",
-    "image": "assets/img2.jpg",
+    "image": "assets/christin-hume-mfB1B1s4sMc-unsplash.jpg",
     "level": "Intermédiaire",
     "introVideo": "https://www.youtube.com/embed/8jLOx1hD3_o",
     "chapters": [
@@ -42,7 +42,7 @@
   {
     "id": 3,
     "title": "C Expert - Gestion mémoire avancée",
-    "image": "assets/img3.jpg",
+    "image": "assets/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg",
     "level": "Expert",
     "introVideo": "https://www.youtube.com/embed/zuegQmMdy8M",
     "chapters": [
