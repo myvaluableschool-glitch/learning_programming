@@ -1,23 +1,58 @@
 [
   {
-    "id":1,
-    "title":"C Débutant - Bases de la programmation",
-    "image":"assets/img1.jpg",
-    "level":"Débutant",
-    "video":"https://www.youtube.com/embed/KJgsSFOSQv0"
+    "id": 1,
+    "title": "C Débutant - Bases de la programmation",
+    "image": "assets/img1.jpg",
+    "level": "Débutant",
+    "introVideo": "https://www.youtube.com/embed/KJgsSFOSQv0",
+    "chapters": [
+      {
+        "title": "Introduction au langage C",
+        "video": "https://www.youtube.com/embed/KJgsSFOSQv0",
+        "resources": [
+          "ressources/cours1.pdf",
+          "ressources/exercices1.zip"
+        ]
+      },
+      {
+        "title": "Variables et types",
+        "video": "https://www.youtube.com/embed/8jLOx1hD3_o",
+        "resources": [
+          "ressources/cours2.pdf"
+        ]
+      }
+    ]
   },
   {
-    "id":2,
-    "title":"C Intermédiaire - Pointeurs et fonctions",
-    "image":"assets/img2.jpg",
-    "level":"Intermédiaire",
-    "video":"https://www.youtube.com/embed/8jLOx1hD3_o"
+    "id": 2,
+    "title": "C Intermédiaire - Pointeurs et fonctions",
+    "image": "assets/img2.jpg",
+    "level": "Intermédiaire",
+    "introVideo": "https://www.youtube.com/embed/8jLOx1hD3_o",
+    "chapters": [
+      {
+        "title": "Les fonctions",
+        "video": "https://www.youtube.com/embed/8jLOx1hD3_o",
+        "resources": [
+          "ressources/fonctions.pdf"
+        ]
+      }
+    ]
   },
   {
-    "id":3,
-    "title":"C Expert - Gestion mémoire avancée",
-    "image":"assets/img3.jpg",
-    "level":"Expert",
-    "video":"https://www.youtube.com/embed/zuegQmMdy8M"
+    "id": 3,
+    "title": "C Expert - Gestion mémoire avancée",
+    "image": "assets/img3.jpg",
+    "level": "Expert",
+    "introVideo": "https://www.youtube.com/embed/zuegQmMdy8M",
+    "chapters": [
+      {
+        "title": "Gestion mémoire",
+        "video": "https://www.youtube.com/embed/zuegQmMdy8M",
+        "resources": [
+          "ressources/memoire.pdf"
+        ]
+      }
+    ]
   }
 ]
