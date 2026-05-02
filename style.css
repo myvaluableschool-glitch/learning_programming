@@ -5,27 +5,6 @@
   box-sizing:border-box;
 }
 
-.chapter {
-  background:#111827;
-  padding:20px;
-  margin:20px 0;
-  border-radius:12px;
-  border:1px solid #1e293b;
-}
-
-.chapter h3 {
-  margin-bottom:10px;
-}
-
-.chapter ul {
-  margin-top:10px;
-  padding-left:20px;
-}
-
-.chapter a {
-  color:#a78bfa;
-  text-decoration:none;
-}
 body {
   font-family: "Inter", Arial, sans-serif;
   background:#0b1120;
@@ -90,7 +69,7 @@ nav a:hover {
   margin:auto;
 }
 
-/* GRID */
+/* GRID (cards accueil) */
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -104,6 +83,8 @@ nav a:hover {
   overflow:hidden;
   transition:all 0.3s ease;
   border:1px solid #1e293b;
+  text-decoration:none;
+  color:inherit;
 }
 
 .card:hover {
@@ -111,11 +92,11 @@ nav a:hover {
   box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* IMAGE FIX (IMPORTANT) */
+/* IMAGE */
 .card img {
   width:100%;
-  height:180px;           /* taille contrôlée */
-  object-fit:cover;       /* évite déformation */
+  height:180px;
+  object-fit:cover;
   display:block;
 }
 
@@ -152,12 +133,61 @@ nav a:hover {
   box-shadow:0 5px 15px rgba(139,92,246,0.4);
 }
 
-/* VIDEO */
+/* VIDEO INTRO (GRANDE) */
 .video {
   width:100%;
   max-width:800px;
   border-radius:12px;
   margin:20px 0;
+}
+
+/* ========================= */
+/* CHAPITRES (NOUVEAU DESIGN) */
+/* ========================= */
+
+.chapters-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+  margin-top:30px;
+}
+
+.chapter {
+  background:#111827;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #1e293b;
+  transition:0.3s;
+}
+
+.chapter:hover {
+  transform:translateY(-4px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.chapter h3 {
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+/* VIDEO PETITE */
+.chapter iframe {
+  width:100%;
+  height:160px;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+
+/* RESSOURCES */
+.chapter ul {
+  margin-top:10px;
+  padding-left:15px;
+}
+
+.chapter a {
+  color:#a78bfa;
+  text-decoration:none;
+  font-size:13px;
 }
 
 /* FORM */
@@ -192,7 +222,13 @@ footer {
   font-size:14px;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
+@media(max-width:900px){
+  .chapters-grid {
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
 @media(max-width:768px){
   header {
     padding:15px 20px;
@@ -208,5 +244,11 @@ footer {
 
   .container {
     padding:40px 20px;
+  }
+}
+
+@media(max-width:600px){
+  .chapters-grid {
+    grid-template-columns:1fr;
   }
 }
