@@ -1,3 +1,72 @@
+// =========================
+// TRADUCTIONS
+// =========================
+const translations = {
+  fr: {
+    voir: "Voir le cours",
+    niveau: "Niveau",
+    intro: "Vidéo d'introduction",
+    chapitres: "Chapitres",
+    aucunChapitre: "Aucun chapitre disponible",
+    erreur: "Erreur de chargement",
+    introuvable: "Cours introuvable",
+    aucuneRessource: "Aucune ressource"
+  },
+  en: {
+    voir: "View course",
+    niveau: "Level",
+    intro: "Introduction video",
+    chapitres: "Chapters",
+    aucunChapitre: "No chapters available",
+    erreur: "Loading error",
+    introuvable: "Course not found",
+    aucuneRessource: "No resources"
+  },
+  ar: {
+    voir: "عرض الدورة",
+    niveau: "المستوى",
+    intro: "فيديو تمهيدي",
+    chapitres: "الفصول",
+    aucunChapitre: "لا توجد فصول",
+    erreur: "خطأ في التحميل",
+    introuvable: "الدورة غير موجودة",
+    aucuneRessource: "لا توجد موارد"
+  }
+};
+
+// =========================
+// GESTION LANGUE
+// =========================
+const langSelect = document.getElementById("lang");
+let currentLang = localStorage.getItem("lang") || "fr";
+
+function applyLanguage(lang) {
+  currentLang = lang;
+
+  // texte HTML (data-i18n)
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // RTL arabe
+  document.body.dir = (lang === "ar") ? "rtl" : "ltr";
+
+  localStorage.setItem("lang", lang);
+}
+
+// initialisation langue
+if (langSelect) {
+  langSelect.value = currentLang;
+  applyLanguage(currentLang);
+
+  langSelect.addEventListener("change", e => {
+    applyLanguage(e.target.value);
+  });
+}
+
 
 // =========================
 // PAGE ACCUEIL
@@ -17,7 +86,7 @@ if (document.getElementById("courses")) {
             <div class="card-content">
               <h3>${c.title}</h3>
               <p>${c.level}</p>
-              <span class="btn">Voir le cours</span>
+              <span class="btn">${translations[currentLang].voir}</span>
             </div>
           </a>
         `;
@@ -49,7 +118,7 @@ if (window.location.pathname.includes("course.html")) {
         const c = data.find(x => x.id == id);
 
         if (!c) {
-          container.innerHTML = "<p>Cours introuvable</p>";
+          container.innerHTML = `<p>${translations[currentLang].introuvable}</p>`;
           return;
         }
 
@@ -63,10 +132,16 @@ if (window.location.pathname.includes("course.html")) {
 
             if (ch.resources && ch.resources.length > 0) {
               ch.resources.forEach(r => {
-                resourcesHTML += `<li><a href="${r}" download>${r.split('/').pop()}</a></li>`;
+                resourcesHTML += `
+                  <li>
+                    <a href="${r}" download>
+                      ${r.split('/').pop()}
+                    </a>
+                  </li>
+                `;
               });
             } else {
-              resourcesHTML = "<li>Aucune ressource</li>";
+              resourcesHTML = `<li>${translations[currentLang].aucuneRessource}</li>`;
             }
 
             chaptersHTML += `
@@ -83,20 +158,20 @@ if (window.location.pathname.includes("course.html")) {
           });
 
         } else {
-          chaptersHTML = "<p>Aucun chapitre disponible</p>";
+          chaptersHTML = `<p>${translations[currentLang].aucunChapitre}</p>`;
         }
 
         container.innerHTML = `
           <h1>${c.title}</h1>
 
-          <img src="${c.image}" style="width:100%; max-width:600px;">
+          <img src="${c.image}" style="width:100%; max-width:600px; border-radius:12px;">
 
-          <p><strong>Niveau :</strong> ${c.level}</p>
+          <p><strong>${translations[currentLang].niveau} :</strong> ${c.level}</p>
 
-          <h2>Vidéo d'introduction</h2>
+          <h2>${translations[currentLang].intro}</h2>
           <iframe class="video" src="${c.introVideo || ''}" frameborder="0"></iframe>
 
-          <h2>Chapitres</h2>
+          <h2>${translations[currentLang].chapitres}</h2>
           <div class="chapters-grid">
             ${chaptersHTML}
           </div>
@@ -104,7 +179,7 @@ if (window.location.pathname.includes("course.html")) {
       })
       .catch(err => {
         console.error(err);
-        container.innerHTML = "<p>Erreur de chargement</p>";
+        container.innerHTML = `<p>${translations[currentLang].erreur}</p>`;
       });
 
   }
