@@ -29,7 +29,9 @@ if (window.location.pathname.includes("course.html")) {
           <div class="chapter">
             <h3>${index + 1}. ${ch.title}</h3>
 
-            <iframe class="video" src="${ch.video}" frameborder="0" allowfullscreen></iframe>
+            <div class="chapter-video">
+              <iframe src="${ch.video}" frameborder="0" allowfullscreen></iframe>
+            </div>
 
             <h4>Ressources :</h4>
             <ul>
@@ -50,7 +52,10 @@ if (window.location.pathname.includes("course.html")) {
         <iframe class="video" src="${c.introVideo}" frameborder="0" allowfullscreen></iframe>
 
         <h2>Chapitres</h2>
-        ${chaptersHTML}
+
+        <div class="chapters-grid">
+          ${chaptersHTML}
+        </div>
 
         <a href="index.html" class="btn">Retour</a>
       `;
