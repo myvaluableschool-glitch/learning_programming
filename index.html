@@ -10,6 +10,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* BILINGUE */
+.bilingual {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.bilingual span {
+  width:50%;
+}
+
+.ar {
+  direction:rtl;
+  text-align:right;
+  color:#93c5fd;
+  font-family:"Tahoma", sans-serif;
+}
+</style>
+
 </head>
 
 <body>
@@ -17,45 +38,75 @@
 <header>
   <h1>DevAcademy</h1>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="#formations">Formations</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">Accueil | الرئيسية</a>
+    <a href="#formations">Formations | الدورات</a>
+    <a href="contact.html">Contact | اتصال</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
- <h2 data-i18n="hero_title">Apprends la programmation en C en 30 jours</h2>
-  
+  <h2 class="bilingual">
+    <span>Apprends la programmation en C en 30 jours</span>
+    <span class="ar">تعلم برمجة لغة C في 30 يومًا</span>
+  </h2>
 </section>
 
 <!-- INTRO -->
 <section class="container">
- <p>
-    Cette formation en ligne vous permet de maîtriser les bases de la programmation 
-    à travers le langage C. Elle est conçue pour vous faire progresser rapidement 
-    grâce à des travaux pratiques intensifs et des exercices concrets.
+
+  <p class="bilingual">
+    <span>
+      Cette formation en ligne vous permet de maîtriser les bases de la programmation 
+      à travers le langage C.
+    </span>
+    <span class="ar">
+      تتيح لك هذه الدورة عبر الإنترنت إتقان أساسيات البرمجة باستخدام لغة C
+    </span>
   </p>
-</br>
-  <p>
-    En seulement 30 jours, vous serez capable de développer vos propres programmes 
-    et comprendre les fondamentaux de l’informatique.
+
+  <p class="bilingual">
+    <span>
+      Elle est conçue pour vous faire progresser rapidement grâce à des travaux pratiques intensifs et des exercices concrets.
+    </span>
+    <span class="ar">
+      تم تصميمها لمساعدتك على التقدم بسرعة من خلال تمارين تطبيقية مكثفة ومشاريع عملية
+    </span>
   </p>
+
+  <p class="bilingual">
+    <span>
+      En seulement 30 jours, vous serez capable de développer vos propres programmes et comprendre les fondamentaux de l’informatique.
+    </span>
+    <span class="ar">
+      في غضون 30 يومًا فقط، ستكون قادرًا على تطوير برامجك الخاصة وفهم أساسيات علوم الحاسوب
+    </span>
+  </p>
+
 </section>
 
 <!-- NIVEAUX -->
 <section id="formations" class="container">
-  <h2>Nos niveaux de formation</h2>
-</br>
+  <h2 class="bilingual">
+    <span>Nos niveaux de formation</span>
+    <span class="ar">مستويات التكوين لدينا</span>
+  </h2>
+
   <div class="grid">
 
     <!-- Débutant -->
     <a href="course.html?id=1" class="card">
       <img src="assets/chris-ried-ieic5Tq8YMk-unsplash.jpg" alt="Formation C débutant">
       <div class="card-content">
-        <h3>Niveau Débutant</h3>
-        <p>Variables, conditions, boucles, premiers programmes.</p>
-        <span class="btn">Commencer</span>
+        <h3 class="bilingual">
+          <span>Niveau Débutant</span>
+          <span class="ar">المستوى المبتدئ</span>
+        </h3>
+        <p class="bilingual">
+          <span>Variables, conditions, boucles, premiers programmes.</span>
+          <span class="ar">المتغيرات، الشروط، الحلقات، أولى البرامج</span>
+        </p>
+        <span class="btn">Commencer | ابدأ</span>
       </div>
     </a>
 
@@ -63,9 +114,15 @@
     <a href="course.html?id=2" class="card">
       <img src="assets/christin-hume-mfB1B1s4sMc-unsplash.jpg" alt="Formation C intermédiaire">
       <div class="card-content">
-        <h3>Niveau Intermédiaire</h3>
-        <p>Fonctions, tableaux, pointeurs, projets pratiques.</p>
-        <span class="btn">Continuer</span>
+        <h3 class="bilingual">
+          <span>Niveau Intermédiaire</span>
+          <span class="ar">المستوى المتوسط</span>
+        </h3>
+        <p class="bilingual">
+          <span>Fonctions, tableaux, pointeurs, projets pratiques.</span>
+          <span class="ar">الدوال، المصفوفات، المؤشرات، مشاريع تطبيقية</span>
+        </p>
+        <span class="btn">Continuer | تابع</span>
       </div>
     </a>
 
@@ -73,9 +130,15 @@
     <a href="course.html?id=3" class="card">
       <img src="assets/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg" alt="Formation C expert">
       <div class="card-content">
-        <h3>Niveau Expert</h3>
-        <p>Gestion mémoire, fichiers, optimisation avancée.</p>
-        <span class="btn">Maîtriser</span>
+        <h3 class="bilingual">
+          <span>Niveau Expert</span>
+          <span class="ar">المستوى المتقدم</span>
+        </h3>
+        <p class="bilingual">
+          <span>Gestion mémoire, fichiers, optimisation avancée.</span>
+          <span class="ar">إدارة الذاكرة، الملفات، تحسين الأداء المتقدم</span>
+        </p>
+        <span class="btn">Maîtriser | احتراف</span>
       </div>
     </a>
 
@@ -84,17 +147,36 @@
 
 <!-- AVANTAGES -->
 <section class="container">
-  <h2>Pourquoi choisir cette formation ?</h2>
+  <h2 class="bilingual">
+    <span>Pourquoi choisir cette formation ?</span>
+    <span class="ar">لماذا تختار هذه الدورة؟</span>
+  </h2>
+
   <ul>
-    <li>✔ Formation basée sur la pratique</li>
-    <li>✔ Résultats rapides en 30 jours</li>
-    <li>✔ Vidéos gratuites accessibles à tous</li>
-    <li>✔ Projets concrets</li>
+    <li class="bilingual">
+      <span>✔ Formation basée sur la pratique</span>
+      <span class="ar">✔ دورة مبنية على التطبيق</span>
+    </li>
+    <li class="bilingual">
+      <span>✔ Résultats rapides en 30 jours</span>
+      <span class="ar">✔ نتائج سريعة خلال 30 يومًا</span>
+    </li>
+    <li class="bilingual">
+      <span>✔ Vidéos gratuites accessibles à tous</span>
+      <span class="ar">✔ فيديوهات مجانية متاحة للجميع</span>
+    </li>
+    <li class="bilingual">
+      <span>✔ Projets concrets</span>
+      <span class="ar">✔ مشاريع عملية</span>
+    </li>
   </ul>
 </section>
 
 <footer class="container">
-  <p>© 2026 DevAcademy - Formation en programmation C</p>
+  <p class="bilingual">
+    <span>© 2026 DevAcademy - Formation en programmation C</span>
+    <span class="ar">© 2026 DevAcademy - دورة برمجة بلغة C</span>
+  </p>
 </footer>
 
 <script src="script.js"></script>
